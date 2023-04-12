@@ -8,6 +8,7 @@ import ClassOne from './components/classOne';
 import Login from './components/login';
 import Registration from './components/registration';
 import Register from './components/register';
+import HomePage from './components/homePage';
 
 class App extends Component {
    
@@ -25,6 +26,7 @@ class App extends Component {
                   <Route path='/login' element={<Login/>}/>
                   <Route path='/registration' element={<Registration/>}/>
                   <Route path='/register' element={<Register/>}/>
+                  <Route path='/homepage' element={<HomePage/>}/>
 
 
 </Routes>

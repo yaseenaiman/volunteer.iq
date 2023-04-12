@@ -54,7 +54,7 @@ const HomePage = () => {
                 rel="nofollow"
                 target="_blank"
               >
-                Learn Bootstrap 5
+Help Your Community
               </a>
             </li>
             <li className="nav-item">
@@ -63,7 +63,7 @@ const HomePage = () => {
                 href="https://mdbootstrap.com/docs/standard/"
                 target="_blank"
               >
-                Download MDB UI KIT
+                 Need Help
               </a>
             </li>
           </ul>
@@ -116,8 +116,8 @@ const HomePage = () => {
     {/* Navbar */}
     {/* Jumbotron */}
     <div id="intro" className="p-5 text-center bg-light">
-      <h1 className="mb-3 h2">Learn Bootstrap 5 with MDB</h1>
-      <p className="mb-3">Best &amp; free guide of responsive web design</p>
+      <h1 className="mb-3 h2">MAKE YOUR COMMUNITY BETTER</h1>
+      <p className="mb-3">Volunteer Now</p>
       <a
         className="btn btn-primary m-2"
         href="https://www.youtube.com/watch?v=c9B4TPnak1A"
@@ -125,7 +125,7 @@ const HomePage = () => {
         rel="nofollow"
         target="_blank"
       >
-        Start tutorial
+         Specific Contributions?
       </a>
       <a
         className="btn btn-primary m-2"
@@ -133,7 +133,7 @@ const HomePage = () => {
         target="_blank"
         role="button"
       >
-        Download MDB UI KIT
+        Need Help?
       </a>
     </div>
     {/* Jumbotron */}
@@ -155,7 +155,8 @@ const HomePage = () => {
                 data-mdb-ripple-color="light"
               >
                 <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
+                   src={require('../api/posts/images/river.jpg')} alt="house"
+
                   className="img-fluid"
                 />
                 <a href="#!">
@@ -166,10 +167,9 @@ const HomePage = () => {
                 </a>
               </div>
               <div className="card-body">
-                <h5 className="card-title">Post title</h5>
+                <h5 className="card-title">Clean The River Bank in Jadria</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  You are going to be part of a large number of wonderful people, even small efforts are appreciated!
                 </p>
                 <a href="#!" className="btn btn-primary">
                   Read
@@ -184,7 +184,8 @@ const HomePage = () => {
                 data-mdb-ripple-color="light"
               >
                 <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
+                    src={require('../api/posts/images/tree.jpg')} alt="house"
+
                   className="img-fluid"
                 />
                 <a href="#!">
@@ -195,10 +196,9 @@ const HomePage = () => {
                 </a>
               </div>
               <div className="card-body">
-                <h5 className="card-title">Post title</h5>
+                <h5 className="card-title">Plant a Tree</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  Contribute to our great mission to plant over 2 million trees by 2o25
                 </p>
                 <a href="#!" className="btn btn-primary">
                   Read
@@ -213,7 +213,7 @@ const HomePage = () => {
                 data-mdb-ripple-color="light"
               >
                 <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
+                  src={require('../api/posts/images/house.jpg')} alt="house"
                   className="img-fluid"
                 />
                 <a href="#!">
@@ -224,10 +224,10 @@ const HomePage = () => {
                 </a>
               </div>
               <div className="card-body">
-                <h5 className="card-title">Post title</h5>
+                <h5 className="card-title">Buidling a house for an old man</h5>
                 <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                 An old man who used to be a teacher but he now has no money to build his house. 
+                 More than 10 people are working daily, be part of them!
                 </p>
                 <a href="#!" className="btn btn-primary">
                   Read

@@ -1,9 +1,29 @@
 import React from "react";
-import { Component } from "react";
+import { useState } from "react";
 
-class Register extends Component {
-    state = {  } 
-    render() { 
+function Register () {
+
+
+  const [formData, setFormData] = useState({
+    email: '', // required
+    password: '', // required
+    username: '' // optional
+})
+
+function handleSubmit(e) {
+  e.preventDefault()
+  fetch('http://localhost:3000/users', {
+      method: 'POST',
+      headers: {'Content-Type' : 'application/json'},
+      body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => console.log(data))
+}
+
+function handleChange(e) {
+  setFormData({...formData, [e.target.name] : e.target.value})
+}
         return (<section className="vh-100" style={{ backgroundColor: "#eee" }}>
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
@@ -15,7 +35,7 @@ class Register extends Component {
                       <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                         Sign up
                       </p>
-                      <form className="mx-1 mx-md-4">
+                      <form className="mx-1 mx-md-4" onSubmit={e => handleSubmit(e)}>
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-user fa-lg me-3 fa-fw" />
                           <div className="form-outline flex-fill mb-0">
@@ -23,10 +43,12 @@ class Register extends Component {
                               type="text"
                               id="form3Example1c"
                               className="form-control"
+                               placeholder='Username' value={formData.username} name='username' onChange={e => handleChange(e)} 
+
+
                             />
                             <label className="form-label" htmlFor="form3Example1c">
-                              Your Name
-                            </label>
+ username                            </label>
                           </div>
                         </div>
                         <div className="d-flex flex-row align-items-center mb-4">
@@ -36,6 +58,7 @@ class Register extends Component {
                               type="email"
                               id="form3Example3c"
                               className="form-control"
+                              placeholder='Email' value={formData.email} name='email' onChange={e => handleChange(e)}
                             />
                             <label className="form-label" htmlFor="form3Example3c">
                               Your Email
@@ -49,39 +72,17 @@ class Register extends Component {
                               type="password"
                               id="form3Example4c"
                               className="form-control"
+                              placeholder='Password' value={formData.password} name='password' onChange={e => handleChange(e)}
                             />
                             <label className="form-label" htmlFor="form3Example4c">
                               Password
                             </label>
                           </div>
                         </div>
-                        <div className="d-flex flex-row align-items-center mb-4">
-                          <i className="fas fa-key fa-lg me-3 fa-fw" />
-                          <div className="form-outline flex-fill mb-0">
-                            <input
-                              type="password"
-                              id="form3Example4cd"
-                              className="form-control"
-                            />
-                            <label className="form-label" htmlFor="form3Example4cd">
-                              Repeat your password
-                            </label>
-                          </div>
-                        </div>
-                        <div className="form-check d-flex justify-content-center mb-5">
-                          <input
-                            className="form-check-input me-2"
-                            type="checkbox"
-                            defaultValue=""
-                            id="form2Example3c"
-                          />
-                          <label className="form-check-label" htmlFor="form2Example3">
-                            I agree all statements in{" "}
-                            <a href="#!">Terms of service</a>
-                          </label>
-                        </div>
+                        
+                        
                         <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button type="button" className="btn btn-primary btn-lg">
+                          <button type="submit" className="btn btn-primary btn-lg" >
                             Register
                           </button>
                         </div>
@@ -105,6 +106,6 @@ class Register extends Component {
       
         );
     }
-}
+
  
 export default Register;

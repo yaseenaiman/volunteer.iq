@@ -14,18 +14,25 @@ class App extends Component {
    
   render(  ) {
     return (
-      <div className="App">
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          {/* exact to say this is the main page only */}
 
-          <Route path="/classone" element={<ClassOne />} />
-          <Route path="/homepage" element={<HomePage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/registration" element={<Registration />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </div>
+      <div className='App'>
+       
+       <Routes>
+             <Route exact path='/' element={<Home />}/> 
+             {/* exact to say this is the main page only */}
+
+                  <Route path='/classone' element={<ClassOne/>}/>
+                                  
+                  <Route path='/login' element={<Login/>}/>
+                  <Route path='/registration' element={<Registration/>}/>
+                  <Route path='/register' element={<Register/>}/>
+                  <Route path='/homepage' element={<HomePage/>}/>
+
+
+</Routes>
+
+
+    </div>
     );
 
 

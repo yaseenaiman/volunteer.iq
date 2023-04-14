@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "../style/style.css";
-import ButtonRedirect from "../api/redirect";
 
 // Request on Client
 
@@ -14,7 +13,7 @@ function Login() {
 const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:3000/login", {
+    fetch("http://localhost:3000/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),

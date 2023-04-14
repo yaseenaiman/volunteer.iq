@@ -8,29 +8,24 @@ import ClassOne from './components/classOne';
 import Login from './components/login';
 import Registration from './components/registration';
 import Register from './components/register';
+import HomePage from './components/homePage';
 
 class App extends Component {
    
   render(  ) {
     return (
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          {/* exact to say this is the main page only */}
 
-      <div className='App'>
-       
-       <Routes>
-             <Route exact path='/' element={<Home />}/> 
-             {/* exact to say this is the main page only */}
-
-                  <Route path='/classone' element={<ClassOne/>}/>
-                                  
-                  <Route path='/login' element={<Login/>}/>
-                  <Route path='/registration' element={<Registration/>}/>
-                  <Route path='/register' element={<Register/>}/>
-
-
-</Routes>
-
-
-    </div>
+          <Route path="/classone" element={<ClassOne />} />
+          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/registration" element={<Registration />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </div>
     );
 
 

@@ -18,6 +18,45 @@
   },
   "users": [
     {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "username": "admin",
+      "id": 1
+    },
+    {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "id": 2
+    },
+    {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "id": 3
+    },
+    {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "id": 4
+    },
+    {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "id": 5
+    },
+    {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "id": 6
+    }
+  ],
+  "login": [
+    {
+      "email": "sam2234fg@gmail.com",
+      "password": "3000000",
+      "id": 1
+    }
+  ]
+}
       "email": "yaseenaiman17@gmail.com",
       "password": "gdgdgdgdg",
       "username": "guest",

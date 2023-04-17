@@ -17,7 +17,6 @@ const teachers = [
     {
       Id: 3,
       Name: "Nina",
-      Position: "Senior Engineer",
       Rating: 5.6,
       Articles: 22,
       Followers: 22,
@@ -25,7 +24,6 @@ const teachers = [
     {
       Id: 4,
       Name: "Julia",
-      Position: "Secretary",
       Rating: 10,
       Articles: 44,
       Followers: 22,
@@ -40,7 +38,6 @@ const teachers = [
     {
       Id: 5,
       Name: "sam",
-      Position: "CEO",
       Rating: 9.5,
       Articles: 35,
       Followers: 22,

@@ -1,4 +1,4 @@
-const teachers = [
+const tasks = [
     {
       Id: 1,
       Name: "Clean The River Bank in Jadria",
@@ -45,6 +45,6 @@ const teachers = [
   ];
   
   export function getUsers() {
-    return teachers;
+    return tasks;
   }
   

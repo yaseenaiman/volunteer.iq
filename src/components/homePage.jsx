@@ -1,7 +1,10 @@
 import React from 'react';
 import '../style/style.css';
+import { getUsers } from "../api/api";
+import NewCard from './newCard';
 
-const HomePage = () => {
+const HomePage = () => { 
+
   return (
     <>
   <header>
@@ -12,108 +15,7 @@ const HomePage = () => {
           "\n      #intro {\n        /* Margin to fix overlapping fixed navbar */\n        margin-top: 58px;\n      }\n      @media (max-width: 991px) {\n        #intro {\n          /* Margin to fix overlapping fixed navbar */\n          margin-top: 45px;\n        }\n      }\n    "
       }}
     />
-    {/* Navbar */}
-    <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-      <div className="container-fluid">
-        {/* Navbar brand */}
-        <a
-          className="navbar-brand"
-          target="_blank"
-          href="https://mdbootstrap.com/docs/standard/"
-        >
-          <img
-            src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-            height={16}
-            alt=""
-            loading="lazy"
-            style={{ marginTop: "-3px" }}
-          />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-mdb-toggle="collapse"
-          data-mdb-target="#navbarExample01"
-          aria-controls="navbarExample01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <i className="fas fa-bars" />
-        </button>
-        <div className="collapse navbar-collapse" id="navbarExample01">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item active">
-              <a className="nav-link" aria-current="page" href="#intro">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-                rel="nofollow"
-                target="_blank"
-              >
-Help Your Community
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link"
-                href="https://mdbootstrap.com/docs/standard/"
-                target="_blank"
-              >
-                 Need Help
-              </a>
-            </li>
-          </ul>
-          <ul className="navbar-nav d-flex flex-row">
-            {/* Icons */}
-            <li className="nav-item me-3 me-lg-0">
-              <a
-                className="nav-link"
-                href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA"
-                rel="nofollow"
-                target="_blank"
-              >
-                <i className="fab fa-youtube" />
-              </a>
-            </li>
-            <li className="nav-item me-3 me-lg-0">
-              <a
-                className="nav-link"
-                href="https://www.facebook.com/mdbootstrap"
-                rel="nofollow"
-                target="_blank"
-              >
-                <i className="fab fa-facebook-f" />
-              </a>
-            </li>
-            <li className="nav-item me-3 me-lg-0">
-              <a
-                className="nav-link"
-                href="https://twitter.com/MDBootstrap"
-                rel="nofollow"
-                target="_blank"
-              >
-                <i className="fab fa-twitter" />
-              </a>
-            </li>
-            <li className="nav-item me-3 me-lg-0">
-              <a
-                className="nav-link"
-                href="https://github.com/mdbootstrap/mdb-ui-kit"
-                rel="nofollow"
-                target="_blank"
-              >
-                <i className="fab fa-github" />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    {/* Navbar */}
+
     {/* Jumbotron */}
     <div id="intro" className="p-5 text-center bg-light">
       <h1 className="mb-3 h2">MAKE YOUR COMMUNITY BETTER</h1>
@@ -125,7 +27,7 @@ Help Your Community
         rel="nofollow"
         target="_blank"
       >
-         Specific Contributions?
+         Specific Contributions
       </a>
       <a
         className="btn btn-primary m-2"
@@ -147,184 +49,9 @@ Help Your Community
         <h4 className="mb-5">
           <strong>Latest posts</strong>
         </h4>
-        <div className="row">
-          <div className="col-lg-4 col-md-12 mb-4">
-            <div className="card">
-              <div
-                className="bg-image hover-overlay ripple"
-                data-mdb-ripple-color="light"
-              >
-                <img
-                   src={require('../api/posts/images/river.jpg')} alt="house"
-
-                  className="img-fluid"
-                />
-                <a href="#!">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Clean The River Bank in Jadria</h5>
-                <p className="card-text">
-                  You are going to be part of a large number of wonderful people, even small efforts are appreciated!
-                </p>
-                <a href="#!" className="btn btn-primary">
-                  Read
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card">
-              <div
-                className="bg-image hover-overlay ripple"
-                data-mdb-ripple-color="light"
-              >
-                <img
-                    src={require('../api/posts/images/tree.jpg')} alt="house"
-
-                  className="img-fluid"
-                />
-                <a href="#!">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Plant a Tree</h5>
-                <p className="card-text">
-                  Contribute to our great mission to plant over 2 million trees by 2o25
-                </p>
-                <a href="#!" className="btn btn-primary">
-                  Read
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card">
-              <div
-                className="bg-image hover-overlay ripple"
-                data-mdb-ripple-color="light"
-              >
-                <img
-                  src={require('../api/posts/images/house.jpg')} alt="house"
-                  className="img-fluid"
-                />
-                <a href="#!">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Buidling a house for an old man</h5>
-                <p className="card-text">
-                 An old man who used to be a teacher but he now has no money to build his house. 
-                 More than 10 people are working daily, be part of them!
-                </p>
-                <a href="#!" className="btn btn-primary">
-                  Read
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-lg-4 col-md-12 mb-4">
-            <div className="card">
-              <div
-                className="bg-image hover-overlay ripple"
-                data-mdb-ripple-color="light"
-              >
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/002.jpg"
-                  className="img-fluid"
-                />
-                <a href="#!">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Post title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#!" className="btn btn-primary">
-                  Read
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card">
-              <div
-                className="bg-image hover-overlay ripple"
-                data-mdb-ripple-color="light"
-              >
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/022.jpg"
-                  className="img-fluid"
-                />
-                <a href="#!">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Post title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#!" className="btn btn-primary">
-                  Read
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-md-6 mb-4">
-            <div className="card">
-              <div
-                className="bg-image hover-overlay ripple"
-                data-mdb-ripple-color="light"
-              >
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/035.jpg"
-                  className="img-fluid"
-                />
-                <a href="#!">
-                  <div
-                    className="mask"
-                    style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}
-                  />
-                </a>
-              </div>
-              <div className="card-body">
-                <h5 className="card-title">Post title</h5>
-                <p className="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a href="#!" className="btn btn-primary">
-                  Read
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+       <NewCard />
+         
+           
       </section>
       {/*Section: Content*/}
       {/* Pagination */}

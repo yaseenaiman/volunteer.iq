@@ -9,6 +9,8 @@ import Login from './components/login';
 import Registration from './components/registration';
 import Register from './components/register';
 import HomePage from './components/homePage';
+import CardP from './components/cardP';
+import CardList from './components/cardList';
 
 class App extends Component {
    
@@ -27,6 +29,9 @@ class App extends Component {
                   <Route path='/registration' element={<Registration/>}/>
                   <Route path='/register' element={<Register/>}/>
                   <Route path='/homepage' element={<HomePage/>}/>
+                  <Route path='/cardp' element={<CardP/>}/>
+
+                  <Route path='/cardlist' element={<CardList/>}/>
 
 
 </Routes>

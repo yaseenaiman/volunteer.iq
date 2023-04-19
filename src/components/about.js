@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./about.css";
-import ButtonRedirect from "../API/button";
+
+
 class Sam extends Component {
   state = {};
 

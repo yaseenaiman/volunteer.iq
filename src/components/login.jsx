@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "../style/style.css";
-import ButtonRedirect from "../api/redirect";
 
 // Request on Client
 

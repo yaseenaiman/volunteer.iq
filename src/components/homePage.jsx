@@ -166,6 +166,7 @@ const HomePage = () => {
     {/* Copyright */}
   </footer>
   {/*Footer*/}
+  
 </>
 
   );
